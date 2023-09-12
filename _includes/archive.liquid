@@ -1,6 +1,15 @@
-{% for item in thing %}
+{% for item in collection -%}
+  {% if item.data.title -%}
+    {% assign title = item.data.title %}
+  {%- else -%}
+    {% capture title %}Page {{ item.fileSlug }}{% endcapture %}
+  {%- endif %}
   <div>
-    <img src="{{ item.data.thumb }}" alt="Thumbnail for {{ item.data.title }}">
-    <h3>{{ item.data.title }}</h3>
+    {% if thumbnails -%}
+      <img src="{{ item.data.thumb }}" alt="Thumbnail for {{ title }}">
+    {%- endif %}
+    <h3>
+      <a href="{{ item.url }}">{{ title }}</a>
+    </h3>
   </div>
-{% endfor %}
+{%- endfor %}
