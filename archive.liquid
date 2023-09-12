@@ -7,18 +7,18 @@
   </head>
   <body>
     <h2>Chronological Order</h2>
-    {% render 'archive.liquid', thumbnails: true, collection: collections.teena %}
+    {% render 'chapter.liquid', thumbnails: true, collection: collections.teena %}
     <h2>"Latest First" Order</h2>
-    {% render 'archive.liquid', thumbnails: true, collection: collections.teena | reverse %}
+    {% render 'chapter.liquid', thumbnails: true, collection: collections.teena | reverse %}
     <h2>Or, divide it into chapters/arcs</h2>
     <h2>(You can also turn off thumbnails)</h2>
     <h2>Chapter 1</h2>
-    {% render 'archive.liquid', thumbnails: false, collection: collections.chapter1 %}
+    {% render 'chapter.liquid', thumbnails: false, collection: collections.chapter1 %}
     <h2>Chapter 2</h2>
-    {% render 'archive.liquid', thumbnails: false, collection: collections.chapter2 %}
+    {% render 'chapter.liquid', thumbnails: false, collection: collections.chapter2 %}
     <h2>Chapter 3</h2>
-    {% render 'archive.liquid', thumbnails: false, collection: collections.chapter3 %}
+    {% render 'chapter.liquid', thumbnails: false, collection: collections.chapter3 %}
     <h2>Chapter 4</h2>
-    {% render 'archive.liquid', thumbnails: false, collection: collections.chapter4 %}
+    {% render 'chapter.liquid', thumbnails: false, collection: collections.chapter4 %}
   </body>
 </html>
