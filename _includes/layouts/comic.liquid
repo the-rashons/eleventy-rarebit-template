@@ -6,9 +6,28 @@
     <title>{{ title }}</title>
   </head>
   <body>
+    {% assign current = collections.teena | getCollectionItem %}
+    {% assign first = collections.teena | first %}
+    {% assign previous = collections.teena | getPreviousCollectionItem %}
+    {% assign next = collections.teena | getNextCollectionItem %}
+    {% assign last = collections.teena | last %}
+
     {% for panel in images %}
       <img src="{{ panel }}" alt="{{ alt }}">
     {% endfor %}
     {{ content }}
+
+    {% if current != first %}
+      <a href="{{ first.url }}">First</a>
+    {% endif %}
+    {% if previous %}
+      <a href="{{ previous.url }}">Previous</a>
+    {% endif %}
+    {% if next %}
+      <a href="{{ next.url }}">Next</a>
+    {% endif %}
+    {% if current != last %}
+      <a href="{{ last.url }}">Last</a>
+    {% endif %}
   </body>
 </html>
