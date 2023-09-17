@@ -1,0 +1,17 @@
+---
+layout: layouts/base.liquid
+eleventyComputed:
+  title: "{% if title %}{{ title }}{% else %}Page {{ page.fileSlug }}{% endif %}"
+---
+<div class="comic">
+  {% if title %}
+    <h1>{{ title }}</h1>
+  {% endif %}
+  {% render 'comic.liquid', collection: collections.comic, page: page, images: images, alt: alt %}
+</div>
+{% unless content == "" %}
+  <div class="authorNotes">
+    <h2>Author Notes</h2>
+    {{ content }}
+  </div>
+{% endunless %}

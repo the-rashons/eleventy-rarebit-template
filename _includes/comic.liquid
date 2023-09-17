@@ -1,0 +1,9 @@
+{% render 'comicNav.liquid', collection: collection, page: page %}
+
+<div id="comicPage">
+  {% for panel in images %}
+    <img src="{{ panel }}" alt="{{ alt }}">
+  {% endfor %}
+</div>
+
+{% render 'comicNav.liquid', collection: collection, page: page %}
