@@ -4,7 +4,7 @@
   {%- else -%}
     {% capture title %}Page {{ item.fileSlug }}{% endcapture %}
   {%- endif %}
-  <div>
+  <div class="chapter">
     {% if thumbnails -%}
       <img src="{{ item.data.thumb }}" alt="Thumbnail for {{ title }}">
     {%- endif %}

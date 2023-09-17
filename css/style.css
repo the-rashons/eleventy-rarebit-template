@@ -1,0 +1,69 @@
+@import "/css/reset.css";
+@import "/css/comic.css";
+@import "/css/subpage.css";
+
+/* FONTS */
+
+header,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Cherry Cream Soda", cursive;
+  margin-bottom: 1rem;
+}
+
+p,
+.archiveTable {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: .75rem;
+}
+
+/* universal background color */
+body {
+  background-color: #da5437;
+}
+
+/* link colors */
+a {
+  color: #000000;
+}
+a:hover {
+  color: #da5437;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header img {
+  width: 500px;
+  max-width: 98%;
+}
+header nav {
+  background-color: #ffffff;
+  outline: 3px solid #000000;
+  font-size: 20px;
+  width: 98%;
+  margin: auto;
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  color: #421a1a;
+  margin-top: 2rem;
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  font-size: 12px;
+}
+
+footer p {
+  margin: auto;
+}
