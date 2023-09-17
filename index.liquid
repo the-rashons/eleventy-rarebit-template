@@ -1,0 +1,5 @@
+---
+layout: layouts/base.liquid
+---
+{% assign latest = collections.comic | last %}
+{% render 'comic.liquid', collection: collections.comic, page: latest.page, images: latest.data.images, alt: latest.data.alt %}
