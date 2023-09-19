@@ -3,12 +3,19 @@ layout: layouts/base.liquid
 eleventyComputed:
   title: "{% if title %}{{ title }}{% else %}Page {{ page.fileSlug }}{% endif %}"
 ---
+{% comment %}
+- eleventyComputed
+- Rundown on how Liquid works
+- Using data
+- Using includes
+{% endcomment %}{%# ??? %}
 <div class="comic">
   {% if title %}
     <h1>{{ title }}</h1>
   {% endif %}
   {% render 'comic.liquid', collection: collections.comic, page: page, images: images, alt: alt %}
 </div>
+{%# If we have author notes, include them %}
 {% unless content == "" %}
   <div class="authorNotes">
     <h2>Author Notes</h2>
