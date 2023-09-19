@@ -2,4 +2,15 @@
 layout: layouts/base.liquid
 ---
 {% assign latest = collections.comic | last %}
-{% render 'comic.liquid', collection: collections.comic, page: latest.page, images: latest.data.images, alt: latest.data.alt %}
+<div class="comic">
+  {% if latest.data.title %}
+    <h1>{{ latest.data.title }}</h1>
+  {% endif %}
+  {% render 'comic.liquid', collection: collections.comic, page: latest.page, images: latest.data.images, alt: latest.data.alt %}
+</div>
+{% unless latest.content == "" %}
+  <div class="authorNotes">
+    <h2>Author Notes</h2>
+    {{ latest.content }}
+  </div>
+{% endunless %}
