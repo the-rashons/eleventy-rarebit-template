@@ -1,7 +1,10 @@
 ---
 layout: layouts/base.liquid
 ---
-{% assign latest = collections.comic | last %}
+{% comment %}
+- Similar to `strip.liquid` layout; check that out for further details.
+- Talk a bit about how 11ty collections work; point to documentation
+{% endcomment %}{% assign latest = collections.comic | last %}
 <div class="comic">
   {% if latest.data.title %}
     <h1>{{ latest.data.title }}</h1>
