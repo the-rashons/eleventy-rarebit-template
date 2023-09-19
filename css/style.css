@@ -20,6 +20,10 @@ p,
 
 /* GLOBAL */
 
+:root {
+  --pg-width: min(64rem, 90%);
+}
+
 /* universal background color */
 body {
   background-color: #da5437;
@@ -58,7 +62,7 @@ header nav {
 footer {
   color: #421a1a;
   margin-top: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,7 +88,7 @@ footer p {
 /* style comic page image */
 #comicPage {
   margin: 0 auto;
-  width: min(64rem, 90%);
+  width: var(--pg-width);
 }
 
 /* style nav button images */
@@ -107,14 +111,14 @@ footer p {
   margin: auto;
   padding: 3px;
   padding-top: 0px;
-  width: min(64rem, 90%);
+  width: var(--pg-width);
   font-size: 1.125rem;
 }
 
 /* SUBPAGES */
 
 .subPage {
-  width: min(64rem, 90%);
+  width: var(--pg-width);
   max-width: 98%;
   background-color: #ffffff;
   outline: 3px solid #000000;
