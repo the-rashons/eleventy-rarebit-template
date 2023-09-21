@@ -1,3 +1,7 @@
+{% comment %}
+give context: how work
+https://www.11ty.dev/docs/filters/collection-items/
+{% endcomment %}
 {% assign current = collection | getCollectionItem: page %}
 {% assign first = collection | first %}
 {% assign previous = collection | getPreviousCollectionItem: page %}

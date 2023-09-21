@@ -1,3 +1,13 @@
+/**
+ * CSS is how you can add style to your website, such as colors, fonts, and
+ * positioning of your HTML content. Much of what's here is self-explanitory,
+ * but I'll 
+ */
+
+/**
+ * @import lets you break up your CSS into multiple files; I use it here to
+ * seperate the reset settings from the rest of the styles.
+ */
 @import "/css/reset.css";
 
 /* FONTS */
@@ -20,7 +30,12 @@ p,
 
 /* GLOBAL */
 
+/* what is root? */
 :root {
+  /**
+   * what are we defining here? 
+   * also, what is min?
+   */
   --pg-width: min(64rem, 90%);
 }
 
@@ -40,9 +55,9 @@ a:hover {
 /* HEADER */
 
 header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 header img {
   width: 500px;
@@ -88,6 +103,9 @@ footer p {
 /* style comic page image */
 #comicPage {
   margin: 0 auto;
+  /**
+   * Here is our first example of calling a CSS variable!
+   */
   width: var(--pg-width);
 }
 
@@ -158,6 +176,6 @@ footer p {
   align-items: center;
   justify-content: center;
 }
-.characters img{
+.characters img {
   width: 100%;
 }

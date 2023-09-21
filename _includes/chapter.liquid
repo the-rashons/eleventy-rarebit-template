@@ -2,17 +2,13 @@
 This 
 {% endcomment %}
 {% for item in collection -%}
-  {% if item.data.title -%}
-    {% assign title = item.data.title %}
-  {%- else -%}
-    {% capture title %}Page {{ item.fileSlug }}{% endcapture %}
-  {%- endif %}
   <div class="chapter">
+    {%# If `thumbnails` is true, display the page's thumbnail %}
     {% if thumbnails -%}
-      <img src="{{ item.data.thumb }}" alt="Thumbnail for {{ title }}">
+      <img src="{{ item.data.thumb }}" alt="Thumbnail for {{ item.data.title }}">
     {%- endif %}
     <h3>
-      <a href="{{ item.url }}">{{ title }}</a>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
     </h3>
   </div>
 {%- endfor %}
