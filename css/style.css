@@ -1,7 +1,7 @@
 /**
  * CSS is how you can add style to your website, such as colors, fonts, and
  * positioning of your HTML content. Much of what's here is self-explanitory,
- * but I'll 
+ * but I'll give context to some of the less well-known parameters/functions.
  */
 
 /**
@@ -19,6 +19,10 @@ h3,
 h4,
 h5 {
   font-family: "Cherry Cream Soda", cursive;
+  /**
+   * Todo: Write why we use rem units and set them throughout the stylesheet
+   * https://www.youtube.com/watch?v=N5wpD9Ov_To
+   */
   margin-bottom: 1rem;
 }
 
@@ -30,11 +34,21 @@ p,
 
 /* GLOBAL */
 
-/* what is root? */
+/**
+ * :root targets the root element of the document; in practice, it targets the
+ * `<html>` tag, just with a higher specificity than calling it directly. It's
+ * most commonly used for defining custom variables, which you can see below!
+ * (https://developer.mozilla.org/en-US/docs/Web/CSS/:root)
+ */
 :root {
   /**
-   * what are we defining here? 
-   * also, what is min?
+   * Custom variables allow us to set repeating values in one place. In this
+   * case, we're defining the maximum width of our pages.
+   * (https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)
+   *
+   * Also, check out the `min()` property: it picks whatever is the smallest of
+   * the two given properties as the width! For more details on it and similar
+   * properties, check out Kevin Powell's video: https://youtu.be/U9VF-4euyRo
    */
   --pg-width: min(64rem, 90%);
 }
@@ -55,6 +69,10 @@ a:hover {
 /* HEADER */
 
 header {
+  /**
+   * For those unfamiliar with flexbox, check out this CSS Tricks article:
+   * https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+   */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +122,8 @@ footer p {
 #comicPage {
   margin: 0 auto;
   /**
-   * Here is our first example of calling a CSS variable!
+   * Here is our first example of calling a CSS variable, using the `var()`
+   * property to call `--pg-width`!
    */
   width: var(--pg-width);
 }
@@ -166,6 +185,10 @@ footer p {
 
 /* character page */
 .characters {
+  /**
+   * For those unfamiliar with grid, check out this CSS Tricks article:
+   * https://css-tricks.com/snippets/css/complete-guide-grid/
+   */
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 1rem;
