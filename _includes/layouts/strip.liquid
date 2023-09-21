@@ -1,18 +1,23 @@
 ---
 layout: layouts/base.liquid
 eleventyComputed:
+  # eleventyComputed is a special metadata type in 11ty, as it allows for using
+  # templating functions within front matter data. In our use case, we have it
+  # set to generate a title based on the page's filename if we didn't give it
+  # one within the front matter data.
+  # (https://www.11ty.dev/docs/data-computed/)
   title: "{% if title %}{{ title }}{% else %}Page {{ page.fileSlug }}{% endif %}"
 ---
 {% comment %}
-- eleventyComputed
-- Rundown on how Liquid works
-- Using data
-- Using includes
-{% endcomment %}{%# ??? %}
-<div class="comic">
-  {% if title %}
-    <h1>{{ title }}</h1>
-  {% endif %}
+Beyond breaking pages into multiple components that can be included at will,
+Liquid files can apply data from 11ty onto pages. For a full breakdown on using
+tags and variables in Liquid, see https://liquidjs.com.
+
+As a quick rundown for how this file works, we use the `unless` tag to display
+content depending on if we have data, and the `render` tag includes another
+Liquid file within the template.
+{% endcomment %}<div class="comic">
+  <h1>{{ title }}</h1>
   {% render 'comic.liquid', collection: collections.comic, page: page, images: images, alt: alt %}
 </div>
 {%# If we have author notes, include them %}

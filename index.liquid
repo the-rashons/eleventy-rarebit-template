@@ -14,9 +14,7 @@ individual collections to use within templates.
 {% endcomment %}{%# Get the latest comic released %}
 {% assign latest = collections.comic | last %}
 <div class="comic">
-  {% if latest.data.title %}
-    <h1>{{ latest.data.title }}</h1>
-  {% endif %}
+  <h1>{{ latest.data.title }}</h1>
   {% render 'comic.liquid', collection: collections.comic, page: latest.page, images: latest.data.images, alt: latest.data.alt %}
 </div>
 {%# If we have author notes, include them %}
