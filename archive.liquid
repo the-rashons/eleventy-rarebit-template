@@ -2,8 +2,15 @@
 layout: layouts/page.liquid
 title: Archive
 ---
-<!-- Person: Writing sections of the archive page  -->
-<h2>Chronological Order</h2>
+<!--
+Writing sections of the archive involves including the `chapter.liquid` 
+component onto the page. Including it requires two variables...
+thumbnails: A boolean indicating whether you want thumbnails
+collection: The comic (chapter) collection you want to display; if you gave a
+page a tag in its front matter, that tag becomes a collection you can point to
+
+For more information on collections, see https://www.11ty.dev/docs/collections/
+--><h2>Chronological Order</h2>
 {% render 'chapter.liquid', thumbnails: true, collection: collections.comic %}
 <h2>"Latest First" Order</h2>
 {% render 'chapter.liquid', thumbnails: true, collection: collections.comic | reverse %}
