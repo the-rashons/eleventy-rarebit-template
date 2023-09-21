@@ -1,5 +1,8 @@
 {% comment %}
-This 
+The `for` tag allows us to iterate over an array, which is what a collection
+actually is under the hood. Here, we're saying "For an item in a given
+collection, render out a `<div>` tag with its title, thumbnail, and a link to
+the page."
 {% endcomment %}
 {% for item in collection -%}
   <div class="chapter">

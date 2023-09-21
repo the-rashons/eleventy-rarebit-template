@@ -1,6 +1,12 @@
 {% comment %}
-give context: how work
-https://www.11ty.dev/docs/filters/collection-items/
+Since we're needing to compare the current page to others within a given
+collection, we use the `assign` tag to declare variables within the Liquid
+template. Depending on the variable, we grab either the first/last items in a
+collection or the previous/current/next page in relation to a collection.
+(https://www.11ty.dev/docs/filters/collection-items/)
+
+We then use those variables to determine which navigation buttons to show; if
+we're on the first page of the comic, we don't need to show that button.
 {% endcomment %}
 {% assign current = collection | getCollectionItem: page %}
 {% assign first = collection | first %}
