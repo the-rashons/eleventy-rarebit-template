@@ -1,7 +1,12 @@
 ---
 layout: layouts/base.liquid
 ---
-<div class="subPage">
+{% comment %}
+You may have noticed that both this file and `strip.liquid` both use
+`base.liquid` as a layout, despite being layouts themselves. There's nothing
+actually wrong with that; I'm just pointing it out to say it's intentional!
+(https://www.11ty.dev/docs/layout-chaining/)
+{% endcomment %}<div class="subPage">
   <h1>{{ title }}</h1>
   {{ content }}
 </div>
