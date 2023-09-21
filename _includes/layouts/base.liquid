@@ -3,7 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!---->
+    <!--
+    For data that affects the whole site (say, metadata that describes it), we
+    can add global data to 11ty's data folder! Feel free to expand the included
+    `metadata.json` file with any other information you deem necessary!
+    (https://www.11ty.dev/docs/data-global/)
+    -->
     <title>{{ metadata.title }}
       {%- if title %}
         | {{ title }}
@@ -13,7 +18,7 @@
       rel="stylesheet"
       type="text/css"
       media="all" />
-    <!-- Fonts are being sourced from Google Fonts (https://fonts.google.com/) -->
+    <!-- Fonts are sourced from Google Fonts (https://fonts.google.com/) -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Cherry Cream Soda -->
     <link href="https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&display=swap" rel="stylesheet">
@@ -21,7 +26,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   </head>
   <body>
+    {%# We use `render` tags to include other liquid files in our template %}
     {% render 'header.liquid' %}
+    {% comment %}
+    Since this file is used as a layout, we use the `content` variable to mark
+    where the contents of pages that use this layout go!
+    (https://www.11ty.dev/docs/layouts/)
+    {% endcomment %}
     <main>{{ content }}</main>
     {% render 'footer.liquid' %}
   </body>
