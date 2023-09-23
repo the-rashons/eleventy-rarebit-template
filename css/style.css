@@ -26,8 +26,7 @@ h5 {
   margin-bottom: 1rem;
 }
 
-p,
-.archiveTable {
+p {
   font-family: "Open Sans", sans-serif;
   margin-bottom: .75rem;
 }
@@ -201,4 +200,18 @@ footer p {
 }
 .characters img {
   width: 100%;
+}
+
+/* message box */
+
+ol,
+ul {
+  width: max(24rem, 60%);
+  margin-inline: auto;
+}
+
+li {
+  font-family: "Open Sans", sans-serif;
+  margin-bottom: .25rem;
+  text-align: left;
 }
