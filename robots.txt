@@ -1,0 +1,79 @@
+#################################
+# The robots.txt file
+#################################
+#  
+# Robots are programs that crawl a page to use its content in some other way.
+# The most common reasons for this are search engines, who want to make the site
+# searchable, and AI-Models, who use the Data as part of their training.
+# 
+# This file sets up rules stating which robots can and cannot crawl which parts
+# of the site. However, this file is more of a sign, which simply asks robots to
+# respect the rules. It cannot enforce them.
+# 
+# The basic syntax is simple: You start with a User-Agent,
+# which specifies to which bot the following rules apply to.
+# You can then set "Disallow" Directives, one per row.
+# Lines that start with a '#' are ignored.
+# 
+# By default, this file excludes all Bots from crawling images (the ones in the
+# "img"-folder) and excludes common AI models completely.
+# Please note that preventing search engines from crawling the "/img" folder
+# will also prevent them from finding the page via a reverse image search. 
+# 
+# You may adjust your preferences.
+#
+
+
+#################################
+# Section for Search Engines.
+#################################
+
+# Is handled by the "Every other robot" Part at the bottom.
+
+#################################
+# Section for AI Systems.
+#################################
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+#################################
+# Section for Generic Crawlers
+#################################
+# 
+# These Companies may sell crawled data, so it may be used for search engines
+# and AI-Training Models.
+# 
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+#################################
+# Every other robot.
+#################################
+
+# Disallow the crawling of images.
+# Note: This will prevent reverse image searches from finding the page. 
+User-agent: *
+Disallow: /img/
