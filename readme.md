@@ -22,7 +22,7 @@ This template is built assuming you'll be deploying your site to [Neocities](htt
 5. Open the cloned repository in a [terminal window](https://www.11ty.dev/docs/terminal-window/) and, [assuming Node.JS is installed](https://nodejs.org/), type `npm install`
 6. In the same terminal, start a local webserver by entering `npm start`
 
-You now have a hot-reloading preview of your website! Go ahead and start tailoring the template for your comic. When you're ready to publish, just [commit](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop) and [push]() your changes in GitHub Desktop; your site should update on Neocities shortly afterwards!
+You now have a hot-reloading preview of your website! Go ahead and start tailoring the template for your comic. When you're ready to publish, just [commit](https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop) and [push](https://docs.github.com/en/desktop/making-changes-in-a-branch/pushing-changes-to-github-from-github-desktop) your changes in GitHub Desktop; your site should update on Neocities shortly afterwards!
 
 ## Usage
 
