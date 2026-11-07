@@ -8,7 +8,8 @@
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 module.exports = function(eleventyConfig) {
-		// Copy `img` and `css` folders to output
+		// Copy `img` and `css` folders and robots.txt file to output
 		eleventyConfig.addPassthroughCopy("img");
 		eleventyConfig.addPassthroughCopy("css");
+		eleventyConfig.addPassthroughCopy("robots.txt");
 }
