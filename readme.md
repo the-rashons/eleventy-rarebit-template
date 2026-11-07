@@ -1,6 +1,6 @@
 # eleventy-rarebit-template
 
-eleventy-rarebit-template is a starter template for Eleventy that's built to replicate the functionality found in [geno7's](https://geno7.neocities.org/) [Rarebit](https://rarebit.neocities.org/) webcomic template.
+eleventy-rarebit-template is a starter template for Eleventy that's built to replicate the functionality found in [diana's](https://dianasroom.org/) [Rarebit](https://rarebit.neocities.org/) webcomic template.
 
 ## Features
 
@@ -59,5 +59,5 @@ tags:
 </div>
 ```
 
-Still curious? [Start exploring the template](https://github.com/covalria-sow/eleventy-rarebit-template/blob/master/index.liquid) or [see it working for yourself](https://eleventy-rarebit.neocities.org/)!
+Still curious? [Start exploring the template](https://github.com/the-rashons/eleventy-rarebit-template/blob/master/index.liquid) or [see it working for yourself](https://eleventy-rarebit.neocities.org/)!
 
