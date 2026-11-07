@@ -17,7 +17,7 @@ This template is built assuming you'll be deploying your site to [Neocities](htt
 
 1. [Create a new GitHub repository from this template](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template)
 2. From your [account settings](https://neocities.org/settings) in Neocities, generate an API key for your site by clicking **Manage Site Settings (of target site) > API > Generate API Key**
-3. [Add the API key as an action secret to your repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template#creating-a-repository-from-a-template) with the name `NEOCITIES_API_TOKEN`
+3. [Add the API key as an action secret to your repository](https://docs.github.com/en/actions/how-tos/write-workflows/choose-what-workflows-do/use-secrets#creating-secrets-for-a-repository) with the name `NEOCITIES_API_TOKEN`
 4. Download [GitHub Desktop](https://desktop.github.com/) and [clone the repository to your computer](https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop#cloning-a-repository)
 5. Open the cloned repository in a [terminal window](https://www.11ty.dev/docs/terminal-window/) and, [assuming Node.JS is installed](https://nodejs.org/), type `npm install`
 6. In the same terminal, start a local webserver by entering `npm start`
