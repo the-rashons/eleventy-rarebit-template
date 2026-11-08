@@ -10,19 +10,21 @@ files by 11ty during the build process. For more on Liquid, see `strip.liquid`.
 
 Part of the data cascade includes collections, which are groups of pages
 specified by tags (https://www.11ty.dev/docs/collections/). You can specify
-individual collections to use within templates.
-{% endcomment %}{%# %}
+individual collections to use within templates. For instance, in this file we
+create a variable called `featured` to display the latest entry in the `comic`
+collection. 
 
-{%# If you want the first comic instead of the latest, set `last` to `first` %}
-{% assign latest = collections.comic | last %}
+If you wanted to display the first comic instead, set `last` to `first`.
+{% endcomment %}
+{% assign featured = collections.comic | last %}
 <div class="comic">
-  <h1>{{ latest.data.title }}</h1>
-  {% render 'comic.liquid', collection: collections.comic, page: latest.page, images: latest.data.images, alt: latest.data.alt %}
+  <h1>{{ featured.data.title }}</h1>
+  {% render 'comic.liquid', collection: collections.comic, page: featured.page, images: featured.data.images, alt: featured.data.alt %}
 </div>
 {%# If we have author notes, include them %}
-{% unless latest.content == "" %}
+{% unless featured.content == "" %}
   <div class="authorNotes">
     <h2>Author Notes</h2>
-    {{ latest.content }}
+    {{ featured.content }}
   </div>
 {% endunless %}
